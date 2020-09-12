@@ -47,11 +47,10 @@ bcrypt.compare("veggies", hash, function(err, res) {
 });
 */
 const DATABASE_URL = process.env.DATABASE_URL
-app.listen(3000,()=>{
-	console.log(`server is listening on port ${DATABASE_URL}`);
+app.listen(process.env.PORT || 3000,()=>{
+	console.log(`server is listening on port ${process.env.PORT}`);
 });
 
-console.log (3000)
 
 /*
 / --> res = Hello.....there
