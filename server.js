@@ -26,7 +26,7 @@ app.use(bodyparser.json());
 app.use(cors());
 
 app.get('/', (req, res)=>{
-	res.send(database.users)
+	res.send('It\'s working!!!')
 })
 
 app.post('/signin', (req,res)=> {signin.signinHandler(req,res,db,bcrypt)});
@@ -46,7 +46,7 @@ bcrypt.compare("veggies", hash, function(err, res) {
     // res = false
 });
 */
-const DATABASE_URL = process.env.DATABASE_URL
+
 app.listen(process.env.PORT || 3000,()=>{
 	console.log(`server is listening on port ${process.env.PORT}`);
 });
